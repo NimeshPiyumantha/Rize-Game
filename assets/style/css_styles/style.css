@@ -187,3 +187,85 @@ section#pause-bg div#title-img {
     margin: auto;
     /* animation: spin 4s linear; */
 }
+
+/* ------------------------------Game Over-------------------------------- */
+
+section#gameOver-bg {
+    /* border: 2px solid red; */
+    width: 30%;
+    height: 62%;
+    background-image: url('../../img/png/Dead (10).png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: x 4s linear;
+}
+
+@keyframes x {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+section#gameOver-bg div#gameOver_title-img {
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 55%;
+    background-image: url('../../images/title_game_over.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 6%;
+    right: 0;
+    bottom: 47%;
+    margin: auto;
+    animation: spin 4s linear;
+}
+
+@keyframes spin {
+    0% {
+        width: 150%;
+        height: 100vh;
+        left: -100px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    75% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
