@@ -40,3 +40,65 @@ function idleAnimationStart() {
     idleAnimationNumber = setInterval(idleAnimation, 200);
 }
 
+//Run Animation
+let runImageNumber = 1;
+let runAnimationNumber = 0;
+
+function runAnimation() {
+    runImageNumber = runImageNumber + 1;
+    if (runImageNumber === 9) {
+        runImageNumber = 1;
+    }
+
+    boy.src = "assets/img/png/run (" + runImageNumber + ").png";
+}
+
+function runAnimationStart() {
+    runAnimationNumber = setInterval(runAnimation, 100);
+    clearInterval(idleAnimationNumber);
+}
+
+function keyCheck(event) {
+    let keyCode = event.which;
+
+    if (keyCode === 13) {
+        if (runAnimationNumber === 0) {
+            runAnimationStart();
+        }
+        if (moveBackgroundAnimationId === 0) {
+            moveBackgroundAnimationId = setInterval(moveBackground, 100)
+        }
+        if (boxAnimationId === 0) {
+            boxAnimationId = setInterval(boxAnimation, 100);
+        }
+    }
+
+    if (keyCode === 32) {
+        if (jumpAnimationNumber === 0) {
+            jumpAnimationStart();
+        }
+    }
+    if (moveBackgroundAnimationId === 0) {
+        moveBackgroundAnimationId = setInterval(moveBackground, 100)
+    }
+    if (boxAnimationId === 0) {
+        boxAnimationId = setInterval(boxAnimation, 100);
+    }
+}
+
+let backgroundImagePositionX = 0;
+let moveBackgroundAnimationId = 0;
+
+let score = 0;
+
+function moveBackground() {
+    backgroundImagePositionX = backgroundImagePositionX - 20;
+
+    document.getElementById("background").style.backgroundPositionX = backgroundImagePositionX + "px";
+
+    score = score + 1;
+    document.getElementById("score").innerHTML = score;
+        if(score===500){
+            winResults();
+        }
+}
