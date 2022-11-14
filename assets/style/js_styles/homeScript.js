@@ -28,3 +28,23 @@ $("#sound-icon").click(function (e) {
     }
 });
 
+$("#btnPlay").click(function (e) {
+    window.location.href = "index1.html";
+});
+
+$(function () {
+    $("#controller-icons").draggable({
+        containment: "window"
+    });
+});
+
+$("#controller-icons").hover(function () {
+        // over
+        $("#controller-icons").css("cursor", "grab");
+
+
+    }, function () {
+        // out
+        $("#controller-icons").css("cursor", "pointer");
+    }
+);
