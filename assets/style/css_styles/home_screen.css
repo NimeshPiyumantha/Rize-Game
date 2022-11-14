@@ -20,3 +20,39 @@ section#home-bg {
     align-items: center;
 }
 
+section#home-bg div#title-img {
+    width: 33%;
+    height: 33%;
+    background-image: url('../../images/menu/title.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 12%;
+    animation: spin 4s linear;
+}
+
+@keyframes spin {
+    0% {
+        width: 100%;
+        height: 100vh;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    75% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
