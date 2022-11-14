@@ -138,3 +138,52 @@ function jumpAnimationStart() {
     clearInterval(runAnimationNumber);
     jumpAnimationNumber = setInterval(jumpAnimation, 100);
 }
+
+//boxes
+let boxMarginLeft = 2040;
+
+function createBoxes() {
+    for (let i = 0; i <= 10; i++) {
+        let box = document.createElement("div");
+        box.className = "box";
+        document.getElementById("background").appendChild(box);
+        box.style.marginLeft = boxMarginLeft + "px";
+        box.id = "box" + i;
+
+        if (i < 5) {
+            boxMarginLeft = boxMarginLeft + 2200;
+        }
+        if (i >= 5) {
+            boxMarginLeft = boxMarginLeft + 1200;
+        }
+    }
+}
+
+let boxAnimationId = 0;
+
+function boxAnimation() {
+    for (let i = 0; i < 10; i++) {
+        let box = document.getElementById("box" + i);
+        let currentMarginLeft = getComputedStyle(box).marginLeft;
+        let newMarginLeft = parseInt(currentMarginLeft) - 35;
+        box.style.marginLeft = newMarginLeft + "px";
+
+        if (newMarginLeft >= -110 & newMarginLeft <= 100) {
+            if (boyMarginTop > 500) {
+                clearInterval(boxAnimationId);
+
+                clearInterval(runAnimationNumber);
+                runAnimationNumber = -1;
+
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber = -1;
+
+                clearInterval(moveBackgroundAnimationId);
+                moveBackgroundAnimationId = -1;
+
+                deadAnimationNumber = setInterval(boyDeadAnimation, 100);
+
+            }
+        }
+    }
+}
