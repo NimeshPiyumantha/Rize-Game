@@ -269,3 +269,83 @@ section#gameOver-bg div#gameOver_title-img {
     }
 }
 
+/* ------------------------------Game Win-------------------------------- */
+
+section#gameWin-bg {
+    /* border: 2px solid red; */
+    width: 30%;
+    height: 80%;
+    background-image: url('../../img/png/Jump (3).png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: x 4s linear;
+}
+
+@keyframes x {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+section#gameWin-bg div#gameWin_title-img {
+    /* border: 2px solid red; */
+    width: 51%;
+    height: 35%;
+    background-image: url('../../images/win.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: spin 4s linear;
+}
+
+@keyframes spin {
+    0% {
+        width: 150%;
+        height: 100vh;
+        left: -100px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    75% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
