@@ -202,3 +202,136 @@ function boyDeadAnimation() {
     boy.src = "assets/img/png/Dead (" + deadImageNumber + ").png";
     game_over();
 }
+
+(function () {
+    hide_components();
+    $("#btnSound").addClass("sound-on");
+})();
+
+function playBgTrack() {
+    if ($("#btnSound").hasClass("sound-on")) {
+        audio1.play();
+    } else {
+        audio1.pause();
+    }
+}
+
+$("#btn_goToMenu").click(function (e) {
+    window.location.href = "index.html";
+});
+
+$("#btnSound").click(function (e) {
+    if (!audio1.paused) {
+        audio1.pause();
+        $("#btnSound").removeClass("sound-on");
+    } else {
+        audio1.play();
+        $("#btnSound").addClass("sound-on");
+    }
+});
+
+function blurComponents() {
+    $("#bg-container1").addClass("bg-blur");
+    $("#score-img").addClass("bg-blur");
+    $("#life-img").addClass("bg-blur");
+}
+
+function remove_blur() {
+    $("body").removeClass("bg-blur");
+    $("#bg-container1").removeClass("bg-blur");
+    $("#score-img").removeClass("bg-blur");
+    $("#life-img").removeClass("bg-blur");
+}
+
+$("#btnPause").click(function (e) {
+    $("body").css("pointer-events", "none");
+    $("#btnPause").css("pointer-events", "none");
+    $("#btnResume").css("pointer-events", "auto");
+    $("#btnRestart").css("pointer-events", "auto");
+    $(document).off("32");
+    $(document).off("13");
+
+    $("#btnPause").addClass("pause");
+    $("#btnResume").removeClass("pause");
+
+    blurComponents();
+
+    $("#pause-bg").css("display", "block");
+    $("#title-img").css("display", "block");
+
+    audio1.pause();
+});
+
+$("#btnResume").click(function (e) {
+    $("body").css("pointer-events", "auto");
+    $("#btnPause").css("pointer-events", "auto");
+    $("#btnPause").removeClass("pause");
+    $("#btnRestart").removeClass("pause");
+    $("#btnResume").addClass("pause");
+
+    remove_blur();
+    hide_components();
+    playBgTrack();
+
+});
+
+$("#btnRestart").click(function (e) {
+    location.reload();
+});
+
+function hide_components() {
+    $("#pause-bg").css("display", "none");
+    $("#title-img").css("display", "none");
+
+    $("#gameOver-bg").css("display", "none");
+    $("#gameOver_title-img").css("display", "none");
+
+    $("#gameWin-bg").css("display", "none");
+    $("#gameWin_title-img").css("display", "none");
+}
+
+$(function () {
+    $("#game-controls").draggable({
+        containment: "window"
+    });
+});
+
+$("#game-controls").hover(function () {
+        // over
+        $("#game-controls").css("cursor", "grab");
+
+    }, function () {
+        // out
+        $("#game-controls").css("cursor", "pointer");
+    }
+);
+
+function game_over() {
+    blurComponents();
+
+    $("#gameOver-bg").css("display", "block");
+    $("#gameOver_title-img").css("display", "block");
+
+    audio1.pause();
+    audio4.play();
+    $("#btnSound").removeClass("sound-on");
+
+    boy.css("display", "none");
+    return;
+}
+
+
+function winResults() {
+
+    $(document).off("32");
+    $(document).off("13");
+
+    blurComponents();
+
+    $("#gameWin-bg").css("display", "block");
+    $("#gameWin_title-img").css("display", "block");
+
+    audio1.pause();
+    audio5.play();
+    $("#btnSound").removeClass("sound-on");
+}
