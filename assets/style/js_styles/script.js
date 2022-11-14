@@ -187,3 +187,18 @@ function boxAnimation() {
         }
     }
 }
+
+//dead
+let deadAnimationNumber = 0;
+let deadImageNumber = 1;
+
+function boyDeadAnimation() {
+    deadImageNumber = deadImageNumber + 1;
+
+    if (deadImageNumber === 11) {
+        deadImageNumber = 10;
+    }
+
+    boy.src = "assets/img/png/Dead (" + deadImageNumber + ").png";
+    game_over();
+}
