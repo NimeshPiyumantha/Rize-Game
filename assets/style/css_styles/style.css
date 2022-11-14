@@ -33,3 +33,24 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.score{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 200px;
+    margin-top: 20px;
+    position: absolute;
+    font-family: "Gadugi", serif;
+    color: #ecf0f1 ;
+}
+
+.scoreN{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 15px;
+    position: absolute;
+    font-family: "Gadugi", serif;
+    color: #ecf0f1 ;
+}
+
