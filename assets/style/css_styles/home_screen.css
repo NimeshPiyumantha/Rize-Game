@@ -123,3 +123,9 @@ div#controller-icons>button#sound-icon {
 }
 
 
+/* ---------------------------------------------------------- */
+
+.bg-blur {
+    filter: blur(8px);
+    -webkit-filter: blur(2px);
+}
