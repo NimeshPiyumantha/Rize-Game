@@ -7,7 +7,7 @@ This is using Java Script and Learn It.
 * CSS
 
 ## Links
-* 🔗 <a href="" target="_blank">GitHub Page</a>
+* 🔗 <a href="https://nimeshpiyumantha.github.io/Rize-Game/" target="_blank">GitHub Page</a>
 
 ##
 ![alt text](https://github.com/NimeshPiyumantha/Rize-Game/blob/master/assets/img/gameJs.png)
