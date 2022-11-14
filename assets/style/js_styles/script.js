@@ -102,3 +102,39 @@ function moveBackground() {
             winResults();
         }
 }
+
+//jump Animation
+let jumpAnimationNumber = 0;
+let jumpImageNumber = 1;
+let boyMarginTop = 510;
+
+function jumpAnimation() {
+    jumpImageNumber = jumpImageNumber + 1;
+
+    if (jumpImageNumber <= 6) {
+        boyMarginTop = boyMarginTop - 35;
+        boy.style.marginTop = boyMarginTop + "px";
+    }
+
+    if (jumpImageNumber >= 7) {
+        boyMarginTop = boyMarginTop + 35;
+        boy.style.marginTop = boyMarginTop + "px";
+    }
+
+    if (jumpImageNumber === 11) {
+        jumpImageNumber = 1;
+        clearInterval(jumpAnimationNumber);
+        jumpAnimationNumber = 0;
+        runImageNumber = 0;
+        runAnimationStart();
+    }
+
+    boy.src = "assets/img/png/jump (" + jumpImageNumber + ").png";
+}
+
+function jumpAnimationStart() {
+    clearInterval(idleAnimationNumber);
+    runImageNumber = 0;
+    clearInterval(runAnimationNumber);
+    jumpAnimationNumber = setInterval(jumpAnimation, 100);
+}
