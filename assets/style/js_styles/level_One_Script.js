@@ -64,6 +64,7 @@ function keyCheck(event) {
     if (keyCode === 13) {
         if (runAnimationNumber === 0) {
             runAnimationStart();
+            audio1.play();
         }
         if (moveBackgroundAnimationId === 0) {
             moveBackgroundAnimationId = setInterval(moveBackground, 100)
@@ -76,6 +77,7 @@ function keyCheck(event) {
     if (keyCode === 32) {
         if (jumpAnimationNumber === 0) {
             jumpAnimationStart();
+            audio1.play();
         }
     }
     if (moveBackgroundAnimationId === 0) {
@@ -98,7 +100,7 @@ function moveBackground() {
 
     score = score + 1;
     document.getElementById("score").innerHTML = score;
-    if (score === 500) {
+    if (score === 510) {
         winResults();
     }
 }
@@ -202,6 +204,7 @@ function boyDeadAnimation() {
     game_over();
 }
 
+
 (function () {
     hide_components();
     $("#btnSound").addClass("sound-on");
@@ -281,6 +284,7 @@ $("#btnResume").click(function (e) {
     $("#btnPause").removeClass("pause");
     $("#btnRestart").removeClass("pause");
     $("#btnResume").addClass("pause");
+    location.reload();
 
     remove_blur();
     hide_components();
