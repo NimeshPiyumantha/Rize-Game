@@ -315,14 +315,13 @@ $(function () {
 });
 
 $("#game-controls").hover(function () {
-        // over
-        $("#game-controls").css("cursor", "grab");
+    // over
+    $("#game-controls").css("cursor", "grab");
 
-    }, function () {
-        // out
-        $("#game-controls").css("cursor", "pointer");
-    }
-);
+}, function () {
+    // out
+    $("#game-controls").css("cursor", "pointer");
+});
 
 function game_over() {
     blurComponents();
@@ -335,7 +334,7 @@ function game_over() {
     $("#btnSound").removeClass("sound-on");
 
     boy.css("display", "none");
-    return;
+
 }
 
 
@@ -356,3 +355,7 @@ function winResults() {
     audio5.play();
     $("#btnSound").removeClass("sound-on");
 }
+
+$("#btnNext").click(function (e) {
+    window.location.href = "index3.html";
+});
