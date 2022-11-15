@@ -98,9 +98,9 @@ function moveBackground() {
 
     score = score + 1;
     document.getElementById("score").innerHTML = score;
-        if(score===500){
-            winResults();
-        }
+    if (score === 500) {
+        winResults();
+    }
 }
 
 //jump Animation
@@ -182,7 +182,6 @@ function boxAnimation() {
                 moveBackgroundAnimationId = -1;
 
                 deadAnimationNumber = setInterval(boyDeadAnimation, 100);
-
             }
         }
     }
@@ -243,6 +242,19 @@ function remove_blur() {
     $("#life-img").removeClass("bg-blur");
 }
 
+function pauseAll() {
+    clearInterval(runAnimationNumber);
+    runAnimationNumber = -1;
+
+    clearInterval(jumpAnimationNumber);
+    jumpAnimationNumber = -1;
+
+    clearInterval(moveBackgroundAnimationId);
+    moveBackgroundAnimationId = -1;
+
+    clearInterval(boxAnimationId);
+}
+
 $("#btnPause").click(function (e) {
     $("body").css("pointer-events", "none");
     $("#btnPause").css("pointer-events", "none");
@@ -250,6 +262,7 @@ $("#btnPause").click(function (e) {
     $("#btnRestart").css("pointer-events", "auto");
     $(document).off("32");
     $(document).off("13");
+    pauseAll();
 
     $("#btnPause").addClass("pause");
     $("#btnResume").removeClass("pause");
@@ -288,6 +301,7 @@ function hide_components() {
 
     $("#gameWin-bg").css("display", "none");
     $("#gameWin_title-img").css("display", "none");
+    $("#btnNext").css("display", "none");
 }
 
 $(function () {
@@ -330,6 +344,9 @@ function winResults() {
 
     $("#gameWin-bg").css("display", "block");
     $("#gameWin_title-img").css("display", "block");
+    $("#btnNext").css("display", "block");
+
+    pauseAll();
 
     audio1.pause();
     audio5.play();
