@@ -35,12 +35,22 @@
 }
 
 .box{
-    width: 200px;
+    width: 265px;
+    height: 165px;
+    position: absolute;
+    margin-top: 630px;
+    background-image: url("../../img/dragon.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box2{
+    width: 280px;
     height: 200px;
     position: absolute;
-    margin-top: 660px;
-    background-image: url("../../img/dragon.gif");
-    background-size: contain;
+    margin-top: 340px;
+    background-image: url("../../img/fly_dragon.gif");
+    background-size: cover;
     background-repeat: no-repeat;
 }
 

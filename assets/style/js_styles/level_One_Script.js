@@ -100,7 +100,7 @@ function moveBackground() {
 
     score = score + 1;
     document.getElementById("score").innerHTML = score;
-    if (score <= 510) {
+    if (score >= 510) {
         winResults();
     }
 }
@@ -357,5 +357,5 @@ function winResults() {
 }
 
 $("#btnNext").click(function (e) {
-    window.location.href = "index3.html";
+    window.location.href = "index2.html";
 });
