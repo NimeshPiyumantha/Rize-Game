@@ -46,20 +46,10 @@
 
 .box{
     width: 265px;
-    height: 165px;
+    height: 131px;
     position: absolute;
-    margin-top: 630px;
+    margin-top: 651px;
     background-image: url("../../img/dragon.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.box2{
-    width: 280px;
-    height: 200px;
-    position: absolute;
-    margin-top: 340px;
-    background-image: url("../../img/fly_dragon.gif");
     background-size: cover;
     background-repeat: no-repeat;
 }
