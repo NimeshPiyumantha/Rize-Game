@@ -108,7 +108,7 @@ function moveBackground() {
 //jump Animation
 let jumpAnimationNumber = 0;
 let jumpImageNumber = 1;
-let boyMarginTop = 510;
+let boyMarginTop = 550;
 
 function jumpAnimation() {
     jumpImageNumber = jumpImageNumber + 1;
@@ -147,10 +147,10 @@ let boxMarginLeft = 2040;
 function createBoxes() {
     for (let i = 0; i <= 30; i++) {
         let box = document.createElement("div");
-        box.className = "box";
+        box.className = "box1";
         document.getElementById("background").appendChild(box);
         box.style.marginLeft = boxMarginLeft + "px";
-        box.id = "box" + i;
+        box.id = "box1" + i;
 
         if (i < 16) {
             boxMarginLeft = boxMarginLeft + 1200;
@@ -165,7 +165,7 @@ let boxAnimationId = 0;
 
 function boxAnimation() {
     for (let i = 0; i < 30; i++) {
-        let box = document.getElementById("box" + i);
+        let box = document.getElementById("box1" + i);
         let currentMarginLeft = getComputedStyle(box).marginLeft;
         let newMarginLeft = parseInt(currentMarginLeft) - 40;
         box.style.marginLeft = newMarginLeft + "px";
