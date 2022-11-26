@@ -65,7 +65,7 @@ function keyCheck(event) {
     if (keyCode === 13) {
         if (runAnimationNumber === 0) {
             runAnimationStart();
-            audio1.play();
+            audio2.play();
         }
         if (moveBackgroundAnimationId === 0) {
             moveBackgroundAnimationId = setInterval(moveBackground, 100)
@@ -78,7 +78,7 @@ function keyCheck(event) {
     if (keyCode === 32) {
         if (jumpAnimationNumber === 0) {
             jumpAnimationStart();
-            audio1.play();
+            audio2.play();
         }
     }
     if (moveBackgroundAnimationId === 0) {
