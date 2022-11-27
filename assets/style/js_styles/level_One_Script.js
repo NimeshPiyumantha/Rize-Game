@@ -215,6 +215,9 @@ function boyDeadAnimation() {
 }
 
 
+/** 
+ * Other Options
+ **/
 (function () {
     hide_components();
     $("#btnSound").addClass("sound-on");
