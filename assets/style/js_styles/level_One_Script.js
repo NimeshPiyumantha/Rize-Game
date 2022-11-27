@@ -100,6 +100,9 @@ let moveBackgroundAnimationId = 0;
 
 let score = 0;
 
+/** 
+ * Move Background
+ **/
 function moveBackground() {
     backgroundImagePositionX = backgroundImagePositionX - 20;
 
