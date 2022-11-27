@@ -40,6 +40,9 @@ $("#btnPlay").click(function (e) {
     window.location.href = "index1.html";
 });
 
+/** 
+ * Draggable window
+ **/
 $(function () {
     $("#controller-icons").draggable({
         containment: "window"
