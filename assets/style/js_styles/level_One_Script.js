@@ -3,6 +3,9 @@
  * @since : 0.1.0
  **/
 
+/** 
+ * All Audio
+ **/
 let audio1 = new Audio();
 audio1.src = "assets/audio/BridgeZone.mp3";
 audio1.play();
