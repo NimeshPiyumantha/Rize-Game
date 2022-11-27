@@ -62,6 +62,9 @@ function runAnimationStart() {
     clearInterval(idleAnimationNumber);
 }
 
+/** 
+ * Key Code set
+ **/
 function keyCheck(event) {
     let keyCode = event.which;
 
