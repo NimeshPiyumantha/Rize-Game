@@ -33,6 +33,9 @@ $("#sound-icon").click(function (e) {
     }
 });
 
+/** 
+ * Button Play
+ **/
 $("#btnPlay").click(function (e) {
     window.location.href = "index1.html";
 });
