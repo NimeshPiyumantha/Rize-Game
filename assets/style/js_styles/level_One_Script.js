@@ -3,6 +3,9 @@
  * @since : 0.1.0
  **/
 
+/** 
+ * All Audio
+ **/
 let audio1 = new Audio();
 audio1.src = "assets/audio/BridgeZone.mp3";
 audio1.play();
@@ -59,6 +62,9 @@ function runAnimationStart() {
     clearInterval(idleAnimationNumber);
 }
 
+/** 
+ * Key Code set
+ **/
 function keyCheck(event) {
     let keyCode = event.which;
 
@@ -94,6 +100,9 @@ let moveBackgroundAnimationId = 0;
 
 let score = 0;
 
+/** 
+ * Move Background
+ **/
 function moveBackground() {
     backgroundImagePositionX = backgroundImagePositionX - 20;
 
@@ -206,6 +215,9 @@ function boyDeadAnimation() {
 }
 
 
+/** 
+ * Other Options
+ **/
 (function () {
     hide_components();
     $("#btnSound").addClass("sound-on");
