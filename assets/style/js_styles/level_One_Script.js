@@ -33,7 +33,7 @@ function idleAnimation() {
         idleImageNumber = 1;
     }
 
-    boy.src = "assets/img/png/idle ("+idleImageNumber+").png";
+    boy.src = "assets/img/png/Idle%20("+idleImageNumber+").png";
 
 }
 
