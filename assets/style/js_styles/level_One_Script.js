@@ -54,7 +54,7 @@ function runAnimation() {
         runImageNumber = 1;
     }
 
-    boy.src = "assets/img/png/run (" + runImageNumber + ").png";
+    boy.src = "assets/img/png/Run("+runImageNumber+").png";
 }
 
 function runAnimationStart() {
@@ -141,7 +141,7 @@ function jumpAnimation() {
         runAnimationStart();
     }
 
-    boy.src = "assets/img/png/jump (" + jumpImageNumber + ").png";
+    boy.src = "assets/img/png/Jump("+jumpImageNumber+").png";
 }
 
 function jumpAnimationStart() {
@@ -210,7 +210,7 @@ function boyDeadAnimation() {
         deadImageNumber = 10;
     }
 
-    boy.src = "assets/img/png/Dead (" + deadImageNumber + ").png";
+    boy.src = "assets/img/png/Dead("+ deadImageNumber +").png";
     game_over();
 }
 
