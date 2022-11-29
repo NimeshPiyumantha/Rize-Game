@@ -23,8 +23,8 @@ function boxAnimation() {
     for (let i = 0; i < 30; i++) {
         let box = parseInt($("#box" + i).css("margin-left"));
 
-        let newMarginLeft = box - 25;
-        $("#box" + i).css("margin-left", newMarginLeft - 25 + "px");
+        let newMarginLeft = box - 32;
+        $("#box" + i).css("margin-left", newMarginLeft - 32 + "px");
 
         if (newMarginLeft >= -110 & newMarginLeft <= 100) {
             if (boyMarginTop > 500) {

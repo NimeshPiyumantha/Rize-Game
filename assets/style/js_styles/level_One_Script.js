@@ -20,7 +20,7 @@ function createBoxes() {
 }
 
 function boxAnimation() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
         let box = parseInt($("#box" + i).css("margin-left"));
 
         let newMarginLeft = box - 25;

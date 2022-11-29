@@ -22,10 +22,10 @@ function createBoxes() {
 
 function boxAnimation() {
     for (let i = 0; i < 30; i++) {
-        let box = parseInt($("#box" + i).css("margin-left"));
+        let box = parseInt($("#box1" + i).css("margin-left"));
 
         let newMarginLeft = box - 30;
-        $("#box" + i).css("margin-left", newMarginLeft - 30 + "px");
+        $("#box1" + i).css("margin-left", newMarginLeft - 30 + "px");
 
         if (newMarginLeft >= -110 & newMarginLeft <= 100) {
             if (boyMarginTop > 500) {
